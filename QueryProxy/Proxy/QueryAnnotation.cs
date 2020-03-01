@@ -1,9 +1,11 @@
-﻿using QueryProxy.Model;
+﻿using Microsoft.Data.Sqlite;
+using QueryProxy.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace QueryProxy.Proxy
 {
@@ -17,11 +19,10 @@ namespace QueryProxy.Proxy
 
         public override object Execute(MethodInfo targetMethod, object[] args, object[] annotations)
         {
-            return new List<Fruit>()
+            using (var data = new FruitDB())
             {
-                new Fruit(){  Name ="Lemon"},
-                new Fruit(){  Name ="Orange"}
-            };
+                return data.Fruits.FromSqlRaw<Fruit>(this.Template,args ).ToList(); //Dataset can be taken by target field
+            }
         }
     }
 }

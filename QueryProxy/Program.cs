@@ -22,7 +22,8 @@ namespace QueryProxy
 
           
             var fruitRepository = serviceProvider.GetService<IFruitRepository>();
-            var fruits=fruitRepository.GetFruits("citruses");
+            fruitRepository.InitDB();
+            var fruits=fruitRepository.GetFruits("Citrus");
             PrintData(fruits);
 
             Console.ReadKey();
@@ -45,7 +46,7 @@ namespace QueryProxy
                      .AddFilter("LoggingConsoleApp.Program", LogLevel.Debug)
                      .AddConsole();
                 })
-                .AddSingleton<IFruitRepository>(ProxyFacotory<IFruitRepository>.Create<IFruitRepository>())
+                .AddSingleton<IFruitRepository>(ProxyFacotory<IFruitRepository>.Create<IFruitRepository,FruitRepositoryImpl>(new FruitRepositoryImpl()))
                 .BuildServiceProvider();
             logger = serviceProvider.GetService<ILoggerFactory>()
                 .CreateLogger<Program>();

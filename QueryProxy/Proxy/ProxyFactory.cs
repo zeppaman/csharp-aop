@@ -28,14 +28,15 @@ namespace QueryProxy.Proxy
                 return aopAttr.Execute(targetMethod, args, annotations);
             }
 
-            var result = targetMethod.Invoke(_decorated, args);
+            var inherithedMethod=interfaceMethods.FirstOrDefault(x => x.Name == targetMethod.Name);
+            var result = inherithedMethod.Invoke(_decorated, args);
             return result;
         }
 
-        public static T Create<T>() where T : class
+        public static T Create<T,TProxy>(TProxy instance) where T : class where TProxy:class
         {
-            object proxy = Create<T, ProxyFacotory<T>>();
-            ((ProxyFacotory<T>)proxy).SetParameters(proxy as T);
+            object proxy = Create<T, ProxyFacotory<TProxy>>();
+            ((ProxyFacotory<TProxy>)proxy).SetParameters(instance);
 
             return (T)proxy;
         }
