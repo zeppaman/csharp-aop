@@ -17,7 +17,7 @@ namespace AspMonitor.Web
         {
 
             // Typed registration
-            builder.Register(c => new CallLogger(Console.Out))
+            builder.Register(c => new CallLogger())
            .Named<IInterceptor>("log-calls");
 
             // The generic ILogger<TCategoryName> service was added to the ServiceCollection by ASP.NET Core.

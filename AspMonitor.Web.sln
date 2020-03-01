@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspMonitor.Web", "AspMonitor.Web\AspMonitor.Web.csproj", "{9C714457-A0DA-43D2-A4FC-50E5EAF84504}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspMonitor.Web", "AspMonitor.Web\AspMonitor.Web.csproj", "{9C714457-A0DA-43D2-A4FC-50E5EAF84504}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspMonitor", "..\AspMonitor\AspMonitor.csproj", "{CC9F76FB-B1A8-4A73-8E5E-4DAEF92A7E27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryProxy", "QueryProxy\QueryProxy.csproj", "{3456EED7-1B21-4788-81AC-E3EC0CD42E2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{9C714457-A0DA-43D2-A4FC-50E5EAF84504}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C714457-A0DA-43D2-A4FC-50E5EAF84504}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C714457-A0DA-43D2-A4FC-50E5EAF84504}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC9F76FB-B1A8-4A73-8E5E-4DAEF92A7E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC9F76FB-B1A8-4A73-8E5E-4DAEF92A7E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC9F76FB-B1A8-4A73-8E5E-4DAEF92A7E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC9F76FB-B1A8-4A73-8E5E-4DAEF92A7E27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3456EED7-1B21-4788-81AC-E3EC0CD42E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3456EED7-1B21-4788-81AC-E3EC0CD42E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3456EED7-1B21-4788-81AC-E3EC0CD42E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3456EED7-1B21-4788-81AC-E3EC0CD42E2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
