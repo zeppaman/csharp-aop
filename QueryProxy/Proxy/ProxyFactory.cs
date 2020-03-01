@@ -10,7 +10,6 @@ namespace QueryProxy.Proxy
     public class ProxyFacotory<T> : DispatchProxy
     {
         private T _decorated;
-        private T _interface;
 
         protected override object Invoke(MethodInfo targetMethod, object[] args)
         {
